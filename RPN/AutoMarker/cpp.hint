@@ -1,0 +1,4 @@
+// Hint files help the Visual Studio IDE interpret Visual C++ identifiers
+// such as names of functions and macros.
+// For more information see https://go.microsoft.com/fwlink/?linkid=865984
+#define GATS_TEST_CASE_WEIGHTED(MACRO_PARAM_GTCW_name, MACRO_PARAM_GTCW_weight) static class TestCase_##MACRO_PARAM_GTCW_name : public gats::TestApp::TestCase { public: TestCase_##MACRO_PARAM_GTCW_name() : TestCase(#MACRO_PARAM_GTCW_name,(MACRO_PARAM_GTCW_weight)) { } public: virtual void execute() override; } TestCase_##MACRO_PARAM_GTCW_name##_g; void TestCase_##MACRO_PARAM_GTCW_name :: execute()
